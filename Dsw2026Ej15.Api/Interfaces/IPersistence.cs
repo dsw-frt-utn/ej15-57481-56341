@@ -12,4 +12,5 @@ public interface IPersistence
     Speciality? GetSpecialityById(Guid id);
     void SaveDoctor(Doctor doctor);
     List<Doctor> GetActiveDoctors();
+    Doctor? GetActiveDoctorById(Guid id);
 }
