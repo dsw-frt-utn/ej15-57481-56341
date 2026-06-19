@@ -15,6 +15,11 @@ public class PersistenceInMemory : IPersistence
         LoadSpecialities();
     }
 
+    public void DesactiveDoctor(Doctor doctor)
+    {
+        doctor.Desavativate();
+    }
+
     public Doctor? GetActiveDoctorById(Guid id)
     {
         return _doctors.SingleOrDefault(d => d.Id == id && d.IsActive);

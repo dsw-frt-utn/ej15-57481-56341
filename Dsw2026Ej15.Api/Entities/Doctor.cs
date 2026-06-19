@@ -7,6 +7,11 @@ public class Doctor : BaseEntity
     public bool IsActive { get; private set; }
     public Speciality? Speciality { get; private set; }
 
+    public void Desavativate()
+    {
+        IsActive = false;
+    }
+
     public Doctor(string name, string licenseNumber, Speciality speciality, Guid? id = null) : base(id)
     {
         Name = name;

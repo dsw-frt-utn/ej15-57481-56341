@@ -59,6 +59,17 @@ namespace Dsw2026Ej15.Api.Controllers
             };
             return Ok(response);
         }
+        [HttpDelete("doctors/{id}")]
+        public async Task<IActionResult> DeleteDoctor(Guid id)
+        {
+            var doctor = _persistence.GetActiveDoctorById(id);
+            if (doctor is null)
+            {
+                return NotFound("Médico no encontrado o inactivo");
+            }
 
+            _persistence.DesactiveDoctor(doctor);
+            return NoContent();
+        }
     }
 }

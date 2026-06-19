@@ -13,4 +13,6 @@ public interface IPersistence
     void SaveDoctor(Doctor doctor);
     List<Doctor> GetActiveDoctors();
     Doctor? GetActiveDoctorById(Guid id);
+
+    void DesactiveDoctor(Doctor doctor);
 }
