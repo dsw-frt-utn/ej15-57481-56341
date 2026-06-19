@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dsw2026Ej15.Data.Dtos
 {
-    public record SpecialityDto(Guid Id,string Name,string Description);
+    internal record SpecialityDto(Guid Id,string Name,string Description);
     
     
 }

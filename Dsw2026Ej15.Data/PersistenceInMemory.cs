@@ -15,13 +15,25 @@ public class PersistenceInMemory : IPersistence
         LoadSpecialities();
     }
 
+    public Speciality? GetSpecialityById(Guid id)
+    {
+        return _specialities.SingleOrDefault(e => e.Id == id);
+    }
+
+    public void SaveDoctor(Doctor doctor)
+    {
+        _doctors.Add(doctor);
+    }
+
+   
+
     private void LoadSpecialities()
     {
         try
         {
             string jsonPath = Path.Combine(
                 AppDomain.CurrentDomain.BaseDirectory,
-                "Sources",
+                "Source",
                 "specialities.json");
 
             var json = File.ReadAllText(jsonPath);
