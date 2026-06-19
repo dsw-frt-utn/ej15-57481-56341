@@ -15,6 +15,11 @@ public class PersistenceInMemory : IPersistence
         LoadSpecialities();
     }
 
+    public List<Doctor> GetActiveDoctors()
+    {
+        return _doctors.Where(d => d.IsActive).ToList();
+    }
+
     public Speciality? GetSpecialityById(Guid id)
     {
         return _specialities.SingleOrDefault(e => e.Id == id);

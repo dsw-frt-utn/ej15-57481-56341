@@ -34,5 +34,13 @@ namespace Dsw2026Ej15.Api.Controllers
             _persistence.SaveDoctor(doctor);
                 return Created();
         }
+
+        [HttpGet("doctors")]
+        public async Task<IActionResult> GetDoctors()
+        {
+            var doctors = _persistence.GetActiveDoctors();
+            return Ok(doctors);
+        }
+
     }
 }
