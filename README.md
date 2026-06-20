@@ -1,6 +1,6 @@
 # Ejercicio N° 15
 ## Desarrollo de Software
-### Brito Ramiro Jesus 56341 3K1, Mercado Agostina 56481 3K1
+### Brito Ramiro Jesus 56341 3K1, Mercado Agostina 57481 3K1
 
 1. Clonar el repositorio creado al aceptar la asignación
 2. Crear una rama de larga duración denominada __development__
